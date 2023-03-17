@@ -34,6 +34,7 @@ export const TodoContextProvider = ({ children }) => {
             task.id === todo.id ? { ...task, title: todo.title } : task)
         setList(editedTask)
         localStorage.setItem("list", JSON.stringify(editedTask))
+    setIsEditing(false)
     }
 
     const markCompleted = (id) => {
